@@ -6,12 +6,12 @@ import NavigationYellow from './Navigations/NavigationYellow'
 
 const Header = () => {
 	return (
-		<>
+		<div>
 			<NavigationYellow />
 			<NavigationTopWhite />
 			<NavigationBlack />
 			<NavigationBottomWhite />
-		</>
+		</div>
 	)
 }
 

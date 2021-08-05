@@ -1,7 +1,7 @@
 import React from 'react'
-
+import classes from './main.module.css'
 const Men = () => {
-	return <h1>Men</h1>
+	return <main className={classes.main}>Men</main>
 }
 
 export default Men

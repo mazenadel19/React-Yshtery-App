@@ -7,7 +7,7 @@ const NavigationTopWhite = () => {
 	return (
 		<>
 			<header className={classes.header}>
-				<Input />
+				<Input placeholder='search' width='250px'/>
 				<div className={classes.image}>
 					<img src='/images/logo.png' alt='logo' />
 				</div>

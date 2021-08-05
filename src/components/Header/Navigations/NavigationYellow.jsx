@@ -5,7 +5,7 @@ import classes from './NavigationYellow.module.css'
 const NavigationYellow = () => {
 	return (
 		<header className={classes.header}>
-			<div className={classes.logo}>yshtery</div>
+			<div className={classes.logo}>yeshtery</div>
 			<div className={classes.slider}>
 				<img
 					src='https://img.icons8.com/ios-glyphs/30/000000/chevron-left.png'

@@ -1,0 +1,36 @@
+.header {
+	width: 100%;
+	height: 2rem;
+	display: flex;
+	padding: 0 10%;
+	align-items: center;
+	background-color: white;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.63);
+}
+
+.nav ul {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.nav li {
+	font-size: 0.9rem;
+}
+
+.nav a {
+	text-decoration: none;
+	color: black;
+}
+
+.nav a:hover > span,
+.nav a.active > span,
+.nav a:focus > span {
+	text-decoration: underline;
+}
+
+.nav a.active::after {
+	content: '/';
+	padding: 0 5px;
+}

@@ -7,7 +7,6 @@
 	background-color: white;
 }
 
-
 .image {
 	display: flex;
 	justify-content: space-evenly;
@@ -34,6 +33,9 @@
 
 @media screen and (max-width: 992px) {
 	.image {
-		visibility: hidden;
+		display: none;
+	}
+	.header {
+		justify-content: space-between;
 	}
 }

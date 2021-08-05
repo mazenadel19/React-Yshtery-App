@@ -42,6 +42,9 @@
 
 @media screen and (max-width: 992px) {
 	.slider {
-		visibility: hidden;
+		display: none;
+	}
+	.header{
+		justify-content: space-between;
 	}
 }

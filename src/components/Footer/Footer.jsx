@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import classes from './Footer.module.css'
-import Input from './Input'
+import Input from '../UI/Input';
+
 const Footer = () => {
 	return (
 		<section className={classes.footer}>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
-import Layout from './components/Layout'
+import Layout from './components/UI/Layout'
 import Bestsellers from './pages/Bestsellers'
 import Kids from './pages/Kids'
 import Men from './pages/Men'

@@ -35,3 +35,10 @@
 .nav a:focus {
 	color: red;
 }
+
+@media screen and (max-width: 670px) {
+	.nav li {
+		margin-left: 1rem;
+		font-size: 0.7rem;
+	}
+}

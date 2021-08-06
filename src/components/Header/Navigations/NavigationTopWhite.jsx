@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Input from '../../Input'
 import classes from './NavigationTopWhite.module.css'
+import Input from '../../UI/Input';
 
 const NavigationTopWhite = () => {
 	return (

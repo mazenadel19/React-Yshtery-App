@@ -4,11 +4,11 @@ import NavigationBottomWhite from './Navigations/NavigationBottomWhite'
 import NavigationTopWhite from './Navigations/NavigationTopWhite'
 import NavigationYellow from './Navigations/NavigationYellow'
 
-const Header = () => {
+const Header = props => {
 	return (
 		<div>
 			<NavigationYellow />
-			<NavigationTopWhite />
+			<NavigationTopWhite showTheModal={props.showTheModal} />
 			<NavigationBlack />
 			<NavigationBottomWhite />
 		</div>

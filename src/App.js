@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
+import Cart from './components/Cart/Cart'
 import Layout from './components/UI/Layout'
 import Bestsellers from './pages/Bestsellers'
 import Kids from './pages/Kids'
@@ -9,7 +10,7 @@ import NotFound from './pages/NotFound'
 import Offers from './pages/Offers'
 import Unisex from './pages/Unisex'
 import Women from './pages/Women'
-import Cart from './components/Cart/Cart';
+import CartProvider from './store/CartProvider'
 
 export default class App extends Component {
 	state = {
@@ -24,9 +25,11 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<>
+			<CartProvider>
 				<Layout showTheModal={this.showTheModal}>
-					{this.state.modalVisiblity && <Cart hideTheModal={this.hideTheModal} />}
+					{this.state.modalVisiblity && (
+						<Cart hideTheModal={this.hideTheModal} />
+					)}
 					<Switch>
 						<Route path='/' exact>
 							<Redirect to='/men' />
@@ -57,7 +60,7 @@ export default class App extends Component {
 						</Route>
 					</Switch>
 				</Layout>
-			</>
+			</CartProvider>
 		)
 	}
 }

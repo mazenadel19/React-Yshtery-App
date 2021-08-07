@@ -1,9 +1,19 @@
-.search {
-	position: relative;
+.input {
 	display: flex;
-	border: 1px solid grey;
-	padding: 15px 10px;
-	height: 10px;
+	align-items: center;
+	margin-bottom: 0.5rem;
+	justify-content: flex-end;
+}
+
+.input label {
+	font-weight: bold;
+	margin-right: 1rem;
+}
+
+.input input {
+	width: 3rem;
 	border-radius: 5px;
-	outline: none;
+	border: 1px solid #ccc;
+	font: inherit;
+	padding-left: 0.5rem;
 }

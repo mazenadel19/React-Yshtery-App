@@ -3,15 +3,15 @@ import classes from './Input.module.css'
 
 const Input = props => {
 	return (
-		<form method='post'>
+		<div className={classes.input}>
 			<input
-				type='search'
-				name=''
-				className={classes.search}
+				{...props.input}
+				value={props.value}
+				onChange={props.inputHandler}
 				placeholder={props.placeholder}
 				style={{ width: props.width }}
 			/>
-		</form>
+		</div>
 	)
 }
 

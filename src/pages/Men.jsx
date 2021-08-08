@@ -1,11 +1,11 @@
 import React from 'react'
-import Products from '../services/Products'
-import classes from './main.module.css'
 import blackShirt from '../images/blackShirt.jpg'
 import blueShirt from '../images/blueShirt.jpg'
 import purpleShirt from '../images/purpleShirt.png'
 import redShirt from '../images/redShirt.jpeg'
 import whiteShirt from '../images/whiteShirt.jpg'
+import Products from '../services/Products'
+import classes from './main.module.css'
 
 const DUMMY_Products = [
 	{
@@ -45,10 +45,13 @@ const DUMMY_Products = [
 	},
 ]
 
-const Men = () => {
+const Men = props => {
 	return (
 		<main className={classes.main}>
-			<Products DUMMY_Products={DUMMY_Products} />
+			<Products
+				DUMMY_Products={DUMMY_Products}
+				addItemToCartHandler={props.addItemToCartHandler}
+			/>
 		</main>
 	)
 }

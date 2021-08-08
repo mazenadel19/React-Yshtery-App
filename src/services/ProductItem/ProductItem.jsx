@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import Card from '../../components/UI/Card'
-import CartContext from '../../store/cart-context'
 import classes from './ProductItem.module.css'
 import ProductItemForm from './ProductItemForm'
 
 export default class ProductItem extends Component {
-	static contextType = CartContext
 
 	AddToCartHandler = amount => {
-		this.context.addItem({
+		this.props.addItemToCartHandler({
 			id: this.props.id,
 			name: this.props.name,
 			price: this.props.price,
@@ -21,6 +19,10 @@ export default class ProductItem extends Component {
 		return (
 			<li className={classes.product}>
 				<Card>
+						<ProductItemForm
+							id={this.props.id}
+							onAddToCart={this.AddToCartHandler}
+						/>
 					<div>
 						<h3>{this.props.name}</h3>
 						<div className={classes.description}>{this.props.description}</div>
@@ -28,10 +30,6 @@ export default class ProductItem extends Component {
 						<img src={this.props.image} alt='' height='500px' width='500px' />
 					</div>
 					<div>
-						<ProductItemForm
-							id={this.props.id}
-							onAddToCart={this.AddToCartHandler}
-						/>
 					</div>
 				</Card>
 			</li>

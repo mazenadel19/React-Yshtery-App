@@ -9,7 +9,10 @@ export default class Header extends Component {
 		return (
 			<>
 				<NavigationYellow />
-				<NavigationTopWhite showTheModal={this.props.showTheModal} />
+				<NavigationTopWhite
+					showTheModal={this.props.showTheModal}
+					numberOfCartItems={this.props.numberOfCartItems}
+				/>
 				<NavigationBlack />
 				<NavigationBottomWhite />
 			</>

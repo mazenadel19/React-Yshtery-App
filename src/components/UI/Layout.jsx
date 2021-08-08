@@ -6,7 +6,10 @@ import Footer from '../Footer/Footer';
 const Layout = props => {
 	return (
 		<div className={classes.layout}>
-			<Header showTheModal={props.showTheModal} />
+			<Header
+				showTheModal={props.showTheModal}
+				numberOfCartItems={props.numberOfCartItems}
+			/>
 			{props.children}
 			<Footer />
 		</div>

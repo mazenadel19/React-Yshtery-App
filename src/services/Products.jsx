@@ -11,6 +11,7 @@ const Product = props => {
 			rating={product.rating}
 			price={product.price}
 			image={product.image}
+			addItemToCartHandler={props.addItemToCartHandler}
 		/>
 	))
 

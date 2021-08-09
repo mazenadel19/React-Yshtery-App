@@ -1,0 +1,20 @@
+@import '../../../Styles/Variables/Variables.scss';
+@import '../../../Styles/Breakpoints/breakpoints.scss';
+@import '../../../Styles/Mixins/Header.scss';
+
+.header {
+	@include headerStyle(white, 4rem, 1.5rem, black);
+	@include md-screen {
+		justify-content: space-between;
+	}
+	.image {
+		display: flex;
+		flex: 2 2 auto;
+		height: 4rem;
+		justify-content: space-evenly;
+		@include md-screen {
+			display: none;
+		}
+	}
+}
+

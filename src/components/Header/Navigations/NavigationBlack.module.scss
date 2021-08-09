@@ -1,0 +1,29 @@
+@import '../../../Styles/Variables/Variables.scss';
+@import '../../../Styles/Breakpoints/breakpoints.scss';
+@import '../../../Styles/Mixins/Header.scss';
+
+.header {
+	@include headerStyle(black, 2rem, 1.5rem, white);
+	.nav {
+		width: 100%;
+		ul {
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			li {
+				@include xs-screen {
+					font-size: 0.7rem;
+					margin-left: 1rem;
+				}
+				a {
+					font-weight: bold;
+					&.active,
+					&:focus,
+					&:hover {
+						color: red;
+					}
+				}
+			}
+		}
+	}
+}

@@ -21,22 +21,15 @@ export default class NavigationTopWhite extends Component {
 							<span style={{ backgroundColor: 'yellowgreen' }}>
 								{this.props.numberOfCartItems}
 							</span>
-							<NavLink
-								to='/men'
-								activeClassName={classes.active}
-								onClick={this.cartHandler}>
+							<NavLink to='/men' onClick={this.cartHandler}>
 								Cart
 							</NavLink>
 						</li>
 						<li>
-							<NavLink to='/' activeClassName={classes.active}>
-								WishList
-							</NavLink>
+							<NavLink to='/'>WishList</NavLink>
 						</li>
 						<li>
-							<NavLink to='/' activeClassName={classes.active}>
-								Login
-							</NavLink>
+							<NavLink to='/'>Login</NavLink>
 						</li>
 					</ul>
 				</nav>

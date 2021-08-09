@@ -1,0 +1,22 @@
+@import '../../../Styles/Variables/Variables.scss';
+@import '../../../Styles/Breakpoints/breakpoints.scss';
+@import '../../../Styles/Mixins/Header.scss';
+
+.header {
+	@include headerStyle(white, 2rem, 0, black);
+	border-bottom: 1px solid rgba(128, 128, 128, 0.63);
+	.nav ul {
+		flex-wrap: wrap;
+		a {
+			&.active::after {
+				content: '/';
+				padding: 0 5px;
+			}
+			&.active > span,
+			&:hover > span,
+			&:focus > span {
+				text-decoration: underline;
+			}
+		}
+	}
+}

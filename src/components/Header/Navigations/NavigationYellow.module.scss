@@ -1,0 +1,27 @@
+@import '../../../Styles/Variables/Variables.scss';
+@import '../../../Styles/Breakpoints/breakpoints.scss';
+@import '../../../Styles/Mixins/Header.scss';
+
+.header {
+	@include headerStyle($--primary-color, 2rem, 1.5rem, black);
+	@include md-screen {
+		justify-content: space-between;
+	}
+
+	.logo {
+		font-size: 1.5rem;
+	}
+	.slider {
+		align-items: center;
+		display: flex;
+		flex: 2 2 auto;
+		justify-content: space-evenly;
+		@include md-screen {
+			display: none;
+		}
+	}
+	.chevron {
+		cursor: pointer;
+		height: 20px;
+	}
+}

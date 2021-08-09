@@ -16,7 +16,7 @@ export default class App extends Component {
 		modalVisiblity: false,
 		items: [],
 		totalAmount: 0,
-		numberOfCartItems: 0,
+		numberOfCartItitems: 0,
 	}
 
 	showTheModal = () => {
@@ -30,7 +30,7 @@ export default class App extends Component {
 		const updatedItems = this.state.items.concat(item)
 		const updatedTotalAmount = this.state.totalAmount + item.price * item.amount
 		const updatedNumberOfCartItems = updatedItems.length
-		
+
 		this.setState(prevState => ({
 			items: updatedItems,
 			totalAmount: updatedTotalAmount,

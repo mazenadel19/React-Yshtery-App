@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -9,3 +10,4 @@ html {
 body {
   margin: 0;
 }
+/*# sourceMappingURL=index.css.map */

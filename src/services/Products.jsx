@@ -3,6 +3,9 @@ import ProductItem from './ProductItem/ProductItem'
 import classes from './Products.module.css'
 
 const Product = props => {
+
+	// API CALL IN MEN PAGE AND DATA IS PASSED BY PROPS
+
 	const productsList = props.DUMMY_Products.map(product => (
 		<ProductItem
 			id={product.id}

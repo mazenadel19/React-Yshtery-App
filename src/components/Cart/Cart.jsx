@@ -1,32 +1,39 @@
-import React from 'react'
-import Modal from '../UI/Modal'
+import React, { Component } from 'react'
 import classes from './Cart.module.css'
 
-const Cart = props => {
-	const cartItems = (
-		<ul className={classes['cart-items']}>
-			{[{ id: 't1', name: 'tshirt red', amount: 2, price: 12.99 }].map(item => (
-				<li key={item.id}>{item.name}</li>
-			))}
-		</ul>
-	)
+export default class Cart extends Component {
+	state = {
+		cartVisiblity: true,
+	}
 
-	return (
+	cartHandler = () => {
+		this.setState({ cartVisiblity: !this.state.cartVisiblity })
+	}
 
-		<Modal hideTheModal={props.hideTheModal}>
-			{cartItems}
-			<div className={classes.total}>
-				<span>Total Amount</span>
-				<span>35.62</span>
+	render() {
+		return (
+			<div className={classes.dropdown} onClick={this.cartHandler}>
+				Cart
+				{this.state.cartVisiblity && (
+					<div className={classes['dropdown-content']}>
+						{this.props.items.length > 0 ? (
+							<ul className={classes['cart-items']}>
+								{this.props.items.map(item => (
+									<li key={item.id}>
+										<span>{item.name}</span> <span>x{item.amount}</span>
+									</li>
+								))}
+							</ul>
+						) : (
+							'nothing has been added to cart yet '
+						)}
+						<div className={classes.total}>
+							<span>Total Amount</span>
+							<span>{this.props.totalAmount.toFixed(2)}</span>
+						</div>
+					</div>
+				)}
 			</div>
-			<div className={classes.actions}>
-				<button className={classes['button--alt']} onClick={props.hideTheModal}>
-					Close
-				</button>
-				<button className={classes.button}>Order</button>
-			</div>
-		</Modal>
-	)
+		)
+	}
 }
-
-export default Cart

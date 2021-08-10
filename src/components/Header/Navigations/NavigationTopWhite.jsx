@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
+import Cart from '../../Cart/Cart'
 import Input from '../../UI/Input'
 import classes from './NavigationTopWhite.module.css'
 
 export default class NavigationTopWhite extends Component {
-	cartHandler = () => {
-		this.props.showTheModal()
-	}
-
 	render() {
+		const { numberOfCartItems, items, totalAmount } = this.props.state
 		return (
 			<header className={classes.header}>
 				<Input placeholder='search' width='250px' />
@@ -19,10 +17,11 @@ export default class NavigationTopWhite extends Component {
 					<ul>
 						<li>
 							<span style={{ backgroundColor: 'yellowgreen' }}>
-								{this.props.numberOfCartItems}
+								{numberOfCartItems}
 							</span>
-							<NavLink to='/men' onClick={this.cartHandler}>
-								Cart
+
+							<NavLink to='/men'>
+								<Cart items={items} totalAmount={totalAmount} />
 							</NavLink>
 						</li>
 						<li>

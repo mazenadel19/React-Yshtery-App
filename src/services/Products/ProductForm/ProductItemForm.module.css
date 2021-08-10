@@ -13,8 +13,8 @@
   font-weight: bold;
 }
 
-.form button:hover,
-.form button:active {
+.form button:hover, .form button:active {
   background-color: #641e03;
   border-color: #641e03;
 }
+/*# sourceMappingURL=ProductItemForm.module.css.map */

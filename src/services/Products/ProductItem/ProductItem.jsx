@@ -1,23 +1,32 @@
 import React, { Component } from 'react'
-import Rating from '../../components/Rating/Rating'
-import Card from '../../components/UI/Card'
+import Rating from '../../../components/Rating/Rating'
+import Card from '../../../components/UI/Card'
 import classes from './ProductItem.module.css'
-import ProductItemForm from './ProductItemForm'
 
 export default class ProductItem extends Component {
-	AddToCartHandler = amount => {
-		this.props.addItemToCartHandler({
+	// AddToCartHandler = amount => {
+	// 	this.props.addItemToCartHandler({
+	// 		id: this.props.id,
+	// 		name: this.props.name,
+	// 		price: this.props.price,
+	// 		amount: amount,
+	// 	})
+	// }
+
+	productSelectionHandler = () => {
+		this.props.productSelectionHandler({
 			id: this.props.id,
 			name: this.props.name,
+			rating: this.props.rating,
 			price: this.props.price,
-			amount: amount,
+			image: this.props.image,
 		})
 	}
 
 	render() {
 		const price = `$${this.props.price.toFixed(2)}`
 		return (
-			<li className={classes.product}>
+			<li className={classes.product} onClick={this.productSelectionHandler}>
 				<Card>
 					<div
 						className={classes.cardImg}

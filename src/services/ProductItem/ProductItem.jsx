@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
+import Rating from '../../components/Rating/Rating'
 import Card from '../../components/UI/Card'
 import classes from './ProductItem.module.css'
 import ProductItemForm from './ProductItemForm'
 
 export default class ProductItem extends Component {
-
 	AddToCartHandler = amount => {
 		this.props.addItemToCartHandler({
 			id: this.props.id,
@@ -19,18 +19,26 @@ export default class ProductItem extends Component {
 		return (
 			<li className={classes.product}>
 				<Card>
-						<ProductItemForm
-							id={this.props.id}
-							onAddToCart={this.AddToCartHandler}
-						/>
-					<div>
+					<div
+						className={classes.cardImg}
+						style={{
+							backgroundImage: `url(${this.props.image})`,
+						}}></div>
+					<div className={classes.content}>
 						<h3>{this.props.name}</h3>
-						<div className={classes.description}>{this.props.description}</div>
-						<div className={classes.price}>{price}</div>
-						<img src={this.props.image} alt='' height='500px' width='500px' />
+						<section>
+							<div className={classes.price}>{price} L.E.</div>
+							<img src='/images/logo.png' alt='' width='50px' />
+						</section>
+						<div className={classes.description}>
+							<Rating value={this.props.rating} color='#db7f07' />
+							<span>{this.props.rating} of 5</span>
+						</div>
 					</div>
-					<div>
-					</div>
+					<ProductItemForm
+						id={this.props.id}
+						onAddToCart={this.AddToCartHandler}
+					/>
 				</Card>
 			</li>
 		)

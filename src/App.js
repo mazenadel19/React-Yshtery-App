@@ -2,6 +2,7 @@ import React, { Component, Suspense } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import Layout from './components/UI/Layout'
 
+
 const Bestsellers = React.lazy(() => import('./pages/Bestsellers'))
 const Kids = React.lazy(() => import('./pages/Kids'))
 const Men = React.lazy(() => import('./pages/Men'))
@@ -10,6 +11,7 @@ const NotFound = React.lazy(() => import('./pages/NotFound'))
 const Offers = React.lazy(() => import('./pages/Offers'))
 const Unisex = React.lazy(() => import('./pages/Unisex'))
 const Women = React.lazy(() => import('./pages/Women'))
+
 
 const loading = (
 	<div>

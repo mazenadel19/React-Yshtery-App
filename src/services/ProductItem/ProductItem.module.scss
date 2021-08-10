@@ -1,0 +1,49 @@
+@import '../../Styles/Variables/Variables.scss';
+
+.product {
+	display: flex;
+	justify-content: space-between;
+	margin: 1rem;
+	padding-bottom: 1rem;
+}
+
+.product h3 {
+	margin: 0 0 0.25rem 0;
+}
+
+.description {
+	font-style: italic;
+}
+.cardImg {
+	background-color: #ccc;
+	width: 250px;
+	height: 250px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin-bottom: 10px;
+	border-radius: 8px;
+}
+
+.content {
+	padding: 10px;
+	section {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.price {
+	margin-top: 0.25rem;
+	font-weight: bold;
+	color: $--secondary-color;
+	font-size: 1.25rem;
+}
+
+.description {
+	display: flex;
+	justify-content: space-evenly;
+	font-weight: bold;
+	margin-top:8px ;
+}

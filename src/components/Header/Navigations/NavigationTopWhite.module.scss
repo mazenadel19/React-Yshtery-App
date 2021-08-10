@@ -16,5 +16,14 @@
 			display: none;
 		}
 	}
+	.emptyCart {
+		background-color: red;
+		color: white;
+		padding: 2px;
+	}
+	.fullCart {
+		background-color: yellowgreen;
+		color: black;
+		padding: 2px;
+	}
 }
-

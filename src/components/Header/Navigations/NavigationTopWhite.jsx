@@ -17,13 +17,9 @@ export default class NavigationTopWhite extends Component {
 					<ul>
 						<li>
 							{numberOfCartItems > 0 ? (
-								<span style={{ backgroundColor: 'yellowgreen' }}>
-									{numberOfCartItems}
-								</span>
+								<span className={classes.fullCart}>{numberOfCartItems}</span>
 							) : (
-								<span style={{ backgroundColor: 'red' }}>
-									{numberOfCartItems}
-								</span>
+								<span className={classes.emptyCart}>{numberOfCartItems}</span>
 							)}
 
 							<NavLink to='/men'>

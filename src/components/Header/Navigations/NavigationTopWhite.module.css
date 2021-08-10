@@ -58,4 +58,16 @@
     display: none;
   }
 }
+
+.header .emptyCart {
+  background-color: red;
+  color: white;
+  padding: 2px;
+}
+
+.header .fullCart {
+  background-color: yellowgreen;
+  color: black;
+  padding: 2px;
+}
 /*# sourceMappingURL=NavigationTopWhite.module.css.map */

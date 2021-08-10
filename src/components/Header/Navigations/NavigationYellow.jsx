@@ -1,3 +1,4 @@
+import '@fortawesome/fontawesome-free/css/all.min.css'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import classes from './NavigationYellow.module.css'
@@ -25,17 +26,17 @@ const NavigationYellow = () => {
 				<ul>
 					<li>
 						<NavLink to='/' activeClassName={classes.active}>
-							Contact us
+							<i class='fas fa-phone'></i> Contact us
 						</NavLink>
 					</li>
 					<li>
 						<NavLink to='/' activeClassName={classes.active}>
-							Track Order
+							<i class='fas fa-cart-plus'></i> Track Order
 						</NavLink>
 					</li>
 					<li>
 						<NavLink to='/' activeClassName={classes.active}>
-							Find a store
+							<i class='fas fa-map-marker-alt'></i> Find a store
 						</NavLink>
 					</li>
 				</ul>

@@ -23,14 +23,19 @@ export default class NavigationTopWhite extends Component {
 							)}
 
 							<NavLink to='/men'>
+								<i class='fas fa-ship'></i>{' '}
 								<Cart items={items} totalAmount={totalAmount} />
 							</NavLink>
 						</li>
 						<li>
-							<NavLink to='/'>WishList</NavLink>
+							<NavLink to='/'>
+								<i class='fas fa-heart'></i> WishList
+							</NavLink>
 						</li>
 						<li>
-							<NavLink to='/'>Login</NavLink>
+							<NavLink to='/'>
+								<i class='fas fa-user-alt'></i> Login
+							</NavLink>
 						</li>
 					</ul>
 				</nav>

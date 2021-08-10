@@ -39,10 +39,10 @@ export default class ProductItem extends Component {
 							<span>{this.props.rating} of 5</span>
 						</div>
 					</div>
-					<ProductItemForm
+					{/* <ProductItemForm
 						id={this.props.id}
 						onAddToCart={this.AddToCartHandler}
-					/>
+					/> */}
 				</Card>
 			</li>
 		)

@@ -1,9 +1,9 @@
 import React from 'react'
 import ProductItem from './ProductItem/ProductItem'
 import classes from './Products.module.css'
+import Slider from '../components/UI/Slider';
 
 const Product = props => {
-
 	// API CALL IN MEN PAGE AND DATA IS PASSED BY PROPS
 
 	const productsList = props.DUMMY_Products.map(product => (
@@ -20,7 +20,9 @@ const Product = props => {
 
 	return (
 		<section className={classes.products}>
-			<ul>{productsList}</ul>
+			<Slider>
+				<ul>{productsList}</ul>
+			</Slider>
 		</section>
 	)
 }

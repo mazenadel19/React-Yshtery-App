@@ -3,7 +3,7 @@ import classes from './Cart.module.css'
 
 export default class Cart extends Component {
 	state = {
-		cartVisiblity: true,
+		cartVisiblity: false,
 	}
 
 	cartHandler = () => {

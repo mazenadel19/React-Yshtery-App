@@ -1,14 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component, Suspense } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import Layout from './components/UI/Layout'
-import Bestsellers from './pages/Bestsellers'
-import Kids from './pages/Kids'
-import Men from './pages/Men'
-import Newarrivals from './pages/Newarrivals'
-import NotFound from './pages/NotFound'
-import Offers from './pages/Offers'
-import Unisex from './pages/Unisex'
-import Women from './pages/Women'
+
+const Bestsellers = React.lazy(() => import('./pages/Bestsellers'))
+const Kids = React.lazy(() => import('./pages/Kids'))
+const Men = React.lazy(() => import('./pages/Men'))
+const Newarrivals = React.lazy(() => import('./pages/Newarrivals'))
+const NotFound = React.lazy(() => import('./pages/NotFound'))
+const Offers = React.lazy(() => import('./pages/Offers'))
+const Unisex = React.lazy(() => import('./pages/Unisex'))
+const Women = React.lazy(() => import('./pages/Women'))
+
+const loading = (
+	<div>
+		<p>L0AD!NG...</p>
+	</div>
+)
 
 export default class App extends Component {
 	state = {
@@ -49,35 +56,37 @@ export default class App extends Component {
 	render() {
 		return (
 			<Layout state={this.state}>
-				<Switch>
-					<Route path='/' exact>
-						<Redirect to='/men' />
-					</Route>
-					<Route path='/men'>
-						<Men addItemToCartHandler={this.addItemToCartHandler} />
-					</Route>
-					<Route path='/women'>
-						<Women />
-					</Route>
-					<Route path='/unisex'>
-						<Unisex />
-					</Route>
-					<Route path='/kids'>
-						<Kids />
-					</Route>
-					<Route path='/bestsellers'>
-						<Bestsellers />
-					</Route>
-					<Route path='/newarrivals'>
-						<Newarrivals />
-					</Route>
-					<Route path='/offers'>
-						<Offers />
-					</Route>
-					<Route path='*'>
-						<NotFound />
-					</Route>
-				</Switch>
+				<Suspense fallback={loading}>
+					<Switch>
+						<Route path='/' exact>
+							<Redirect to='/men' />
+						</Route>
+						<Route path='/men'>
+							<Men addItemToCartHandler={this.addItemToCartHandler} />
+						</Route>
+						<Route path='/women'>
+							<Women />
+						</Route>
+						<Route path='/unisex'>
+							<Unisex />
+						</Route>
+						<Route path='/kids'>
+							<Kids />
+						</Route>
+						<Route path='/bestsellers'>
+							<Bestsellers />
+						</Route>
+						<Route path='/newarrivals'>
+							<Newarrivals />
+						</Route>
+						<Route path='/offers'>
+							<Offers />
+						</Route>
+						<Route path='*'>
+							<NotFound />
+						</Route>
+					</Switch>
+				</Suspense>
 			</Layout>
 		)
 	}

@@ -1,6 +1,7 @@
 import React, { Component, Suspense } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import Layout from './components/UI/Layout'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 
 const Bestsellers = React.lazy(() => import('./pages/Bestsellers'))

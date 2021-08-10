@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import './Rating.module.css'
-import '@fortawesome/fontawesome-free/css/all.min.css'
 
 const Rating = ({ value, color }) => {
 	return (

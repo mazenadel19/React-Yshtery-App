@@ -41,9 +41,33 @@
 	font-size: 1.25rem;
 }
 
+.discount {
+	display: flex;
+	justify-content: start;
+	margin-bottom: 10px;
+	align-items: center;
+}
+
+.price2 {
+	margin-top: 0.25rem;
+	font-weight: bold;
+	color: grey;
+	font-size: 0.95rem;
+}
+
+.badge {
+	background-color: $--primary-color;
+	width: fit-content;
+	font-size: 0.7rem;
+	padding: 4px;
+	border-radius: 16px;
+	display: inline-block;
+	margin-left: 5px;
+}
+
 .description {
 	display: flex;
 	justify-content: space-evenly;
 	font-weight: bold;
-	margin-top:8px ;
+	margin-top: 8px;
 }

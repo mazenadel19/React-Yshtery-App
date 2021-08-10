@@ -1,4 +1,4 @@
-import '@fortawesome/fontawesome-free/css/all.min.css'
+
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import classes from './NavigationYellow.module.css'

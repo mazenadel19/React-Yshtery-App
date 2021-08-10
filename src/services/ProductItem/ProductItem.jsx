@@ -30,6 +30,10 @@ export default class ProductItem extends Component {
 							<div className={classes.price}>{price} L.E.</div>
 							<img src='/images/logo.png' alt='' width='50px' />
 						</section>
+						<div className={classes.discount}>
+							<div className={classes.price2}>{price} L.E.</div>
+							<span className={classes.badge}>20% off</span>
+						</div>
 						<div className={classes.description}>
 							<Rating value={this.props.rating} color='#db7f07' />
 							<span>{this.props.rating} of 5</span>

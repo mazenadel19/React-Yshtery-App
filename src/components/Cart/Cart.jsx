@@ -13,7 +13,7 @@ export default class Cart extends Component {
 	render() {
 		return (
 			<div className={classes.dropdown} onClick={this.cartHandler}>
-				<i class='fas fa-ship'></i> Cart
+				<i className='fas fa-ship'></i> Cart
 				{this.state.cartVisiblity && (
 					<div className={classes['dropdown-content']}>
 						{this.props.items.length > 0 ? (

@@ -28,12 +28,12 @@ export default class NavigationTopWhite extends Component {
 						</li>
 						<li>
 							<NavLink to='/'>
-								<i class='fas fa-heart'></i> WishList
+								<i className='fas fa-heart'></i> WishList
 							</NavLink>
 						</li>
 						<li>
 							<NavLink to='/'>
-								<i class='fas fa-user-alt'></i> Login
+								<i className='fas fa-user-alt'></i> Login
 							</NavLink>
 						</li>
 					</ul>

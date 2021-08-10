@@ -26,17 +26,17 @@ const NavigationYellow = () => {
 				<ul>
 					<li>
 						<NavLink to='/' activeClassName={classes.active}>
-							<i class='fas fa-phone'></i> Contact us
+							<i className='fas fa-phone'></i> Contact us
 						</NavLink>
 					</li>
 					<li>
 						<NavLink to='/' activeClassName={classes.active}>
-							<i class='fas fa-cart-plus'></i> Track Order
+							<i className='fas fa-cart-plus'></i> Track Order
 						</NavLink>
 					</li>
 					<li>
 						<NavLink to='/' activeClassName={classes.active}>
-							<i class='fas fa-map-marker-alt'></i> Find a store
+							<i className='fas fa-map-marker-alt'></i> Find a store
 						</NavLink>
 					</li>
 				</ul>

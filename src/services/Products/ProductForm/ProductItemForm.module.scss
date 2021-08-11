@@ -1,19 +1,42 @@
-.form {
-	text-align: right;
-	button {
-		font: inherit;
-		cursor: pointer;
-		background-color: #8a2b06;
-		border: 1px solid #8a2b06;
-		color: white;
-		padding: 0.25rem 2rem;
-		border-radius: 20px;
-		font-weight: bold;
+@import '../../../Styles/Variables/Variables.scss';
 
-		&:hover,
-		&:active {
-			background-color: #641e03;
-			border-color: #641e03;
+.form {
+	margin-top: 25px;
+	strong {
+		margin: 15px 0;
+		display: block;
+	}
+	.buttonsWrapper {
+		display: flex;
+		justify-content: flex-start;
+		button {
+			font: inherit;
+			cursor: pointer;
+			background-color: $--secondary-color;
+			border: 1px solid $--secondary-color;
+			color: white;
+			padding: 0.5rem;
+			border-radius: 20px;
+			font-weight: bold;
+
+			&:hover,
+			&:active {
+				background-color: #3f2170;
+				border-color: #3f2170;
+			}
+		}
+		.pickup {
+			@extend button;
+			background-color: $--primary-color;
+			border: 1px solid $--primary-color;
+			color: black;
+			margin-left: 10px;
+
+			&:hover,
+			&:active {
+				background-color: #d8ce13;
+				border-color: #d8ce13;
+			}
 		}
 	}
 }

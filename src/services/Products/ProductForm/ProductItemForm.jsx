@@ -44,6 +44,7 @@ export default class ProductItemForm extends Component {
 	render() {
 		return (
 			<form className={classes.form}>
+				<strong>Quantity</strong>
 				<Input
 					inputHandler={this.inputHandler}
 					value={this.state.amountInput}
@@ -55,7 +56,10 @@ export default class ProductItemForm extends Component {
 						step: '1',
 					}}
 				/>
-				<button onClick={this.submitHandler}>+ Add</button>
+				<div className={classes.buttonsWrapper}>
+					<button onClick={this.submitHandler}>Add To Cart</button>
+					<button className={classes.pickup}>Pickup From The Store</button>
+				</div>
 				{!this.state.amountIsValid && <p>please enter a valid amount(1-5)</p>}
 			</form>
 		)

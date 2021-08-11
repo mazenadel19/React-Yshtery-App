@@ -6,9 +6,9 @@
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 0.5rem;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .input input {

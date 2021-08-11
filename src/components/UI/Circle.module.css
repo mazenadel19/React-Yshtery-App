@@ -1,0 +1,25 @@
+.circle {
+  width: 50px;
+  cursor: pointer;
+  height: 50px;
+  border: 2px solid #dddcdc;
+  border-radius: 35px;
+  font-size: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+  margin-top: 5px;
+  color: #542e90;
+}
+
+.circle:hover {
+  background-color: #ececec;
+}
+/*# sourceMappingURL=Circle.module.css.map */

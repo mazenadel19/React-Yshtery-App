@@ -1,18 +1,10 @@
 import React, { Component } from 'react'
 import Rating from '../../../components/Rating/Rating'
+import Badge from '../../../components/UI/Badge'
 import Card from '../../../components/UI/Card'
 import classes from './ProductItem.module.css'
 
 export default class ProductItem extends Component {
-	// AddToCartHandler = amount => {
-	// 	this.props.addItemToCartHandler({
-	// 		id: this.props.id,
-	// 		name: this.props.name,
-	// 		price: this.props.price,
-	// 		amount: amount,
-	// 	})
-	// }
-
 	productSelectionHandler = () => {
 		this.props.productSelectionHandler({
 			id: this.props.id,
@@ -20,11 +12,20 @@ export default class ProductItem extends Component {
 			rating: this.props.rating,
 			price: this.props.price,
 			image: this.props.image,
+			discount: this.props.discount,
+			rates: this.props.rates,
+			sex: this.props.sex,
 		})
 	}
 
 	render() {
-		const price = `$${this.props.price.toFixed(2)}`
+		const price = `${this.props.price.toFixed(2)} L.E.`
+
+		const price2 = `${(
+			this.props.price +
+			(this.props.price * this.props.discount) / 100
+		).toFixed(2)} L.E.`
+
 		return (
 			<li className={classes.product} onClick={this.productSelectionHandler}>
 				<Card>
@@ -36,22 +37,18 @@ export default class ProductItem extends Component {
 					<div className={classes.content}>
 						<h3>{this.props.name}</h3>
 						<section>
-							<div className={classes.price}>{price} L.E.</div>
+							<div className={classes.price}>{price}</div>
 							<img src='/images/logo.png' alt='' width='50px' />
 						</section>
 						<div className={classes.discount}>
-							<div className={classes.price2}>{price} L.E.</div>
-							<span className={classes.badge}>20% off</span>
+							<div className={classes.price2}>{price2}</div>
+							<Badge>{this.props.discount}% off</Badge>
 						</div>
 						<div className={classes.description}>
 							<Rating value={this.props.rating} color='#db7f07' />
 							<span>{this.props.rating} of 5</span>
 						</div>
 					</div>
-					{/* <ProductItemForm
-						id={this.props.id}
-						onAddToCart={this.AddToCartHandler}
-					/> */}
 				</Card>
 			</li>
 		)

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Input from '../../components/UI/Input'
+import Input from '../../../components/UI/Input'
 import classes from './ProductItemForm.module.css'
 
 export default class ProductItemForm extends Component {
@@ -32,8 +32,6 @@ export default class ProductItemForm extends Component {
 				amountInput: prevstate.amountInput,
 			}))
 		}
-
-
 
 		this.setState(prevstate => ({
 			amountIsValid: true,

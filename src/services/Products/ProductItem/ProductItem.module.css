@@ -48,7 +48,7 @@
 .price {
   margin-top: 0.25rem;
   font-weight: bold;
-  color: #663399;
+  color: #542e90;
   font-size: 1.25rem;
 }
 
@@ -60,9 +60,9 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .price2 {
@@ -70,18 +70,6 @@
   font-weight: bold;
   color: grey;
   font-size: 0.95rem;
-}
-
-.badge {
-  background-color: #fafa1f;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.7rem;
-  padding: 4px;
-  border-radius: 16px;
-  display: inline-block;
-  margin-left: 5px;
 }
 
 .description {

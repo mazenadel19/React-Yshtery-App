@@ -1,1 +1,94 @@
-/* No CSS *//*# sourceMappingURL=ProductDetails.module.css.map */
+.productDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+.mainImage {
+  background-color: #cfcccc;
+  border-radius: 8px;
+  width: 250px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.mainImage img {
+  height: 400px;
+  width: 100%;
+}
+
+.productInfo {
+  width: 250px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0 30px;
+}
+
+.productInfo div {
+  margin: 5px 0;
+}
+
+.productInfo .sex {
+  margin: 0;
+  color: gray;
+}
+
+.productInfo .ratings,
+.productInfo .pricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.productInfo .ratings strong,
+.productInfo .ratings .rates,
+.productInfo .ratings .priceNew,
+.productInfo .ratings .priceOld,
+.productInfo .pricing strong,
+.productInfo .pricing .rates,
+.productInfo .pricing .priceNew,
+.productInfo .pricing .priceOld {
+  margin-left: 15px;
+}
+
+.productInfo .ratings .priceNew,
+.productInfo .pricing .priceNew {
+  color: #542e90;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.productInfo .ratings .priceOld,
+.productInfo .pricing .priceOld {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.productInfo hr {
+  border: 1px solid #eee;
+}
+
+.productInfo .title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.productInfo .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=ProductDetails.module.css.map */

@@ -1,0 +1,12 @@
+.badge {
+  background-color: #fff204;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.7rem;
+  padding: 4px;
+  border-radius: 16px;
+  display: inline-block;
+  margin-left: 5px;
+}
+/*# sourceMappingURL=Badge.module.css.map */

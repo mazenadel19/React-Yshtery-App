@@ -6,7 +6,16 @@ import ProductItem from './Products/ProductItem/ProductItem'
 
 export default class Products extends Component {
 	state = {
-		selectedProduct: {},
+		selectedProduct: {
+			id: 't1',
+			image: '/static/media/blackShirt.940ce386.png',
+			name: 'Black T-Shirt',
+			price: 22.99,
+			rating: 4.5,
+			sex: 'Men',
+			rates: 12,
+			discount: 20,
+		},
 	}
 
 	productSelectionHandler = selectedProduct => {
@@ -22,6 +31,9 @@ export default class Products extends Component {
 			rating={product.rating}
 			price={product.price}
 			image={product.image}
+			rates={product.rates}
+			discount={product.discount}
+			sex={product.sex}
 			productSelectionHandler={this.productSelectionHandler}
 		/>
 	))
@@ -29,8 +41,13 @@ export default class Products extends Component {
 	render() {
 		return (
 			<section className={classes.products}>
+				<ProductDetails
+					selectedProduct={this.state.selectedProduct}
+					addItemToCartHandler={this.props.addItemToCartHandler}
+				/>
+				<h1>Similar Products</h1>
+				<h2>you may like these products also</h2>
 				<Slider>
-					<ProductDetails selectedProduct={this.state.selectedProduct} />
 					<ul>{this.productsList}</ul>
 				</Slider>
 			</section>

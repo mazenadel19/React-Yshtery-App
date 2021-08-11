@@ -1,7 +1,8 @@
 .slider {
   width: 100%;
   overflow: auto;
-  margin: 100px 0;
+  margin-bottom: 100px;
+  margin-top: 40px;
 }
 
 .slider::-webkit-scrollbar-track {
@@ -17,7 +18,7 @@
 .slider::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #663399;
+  background-color: #542e90;
   border: 1px solid #000;
 }
 /*# sourceMappingURL=Slider.module.css.map */

@@ -1,2 +1,63 @@
+@import '../../../Styles/Variables/Variables.scss';
 .productDetails {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 50px 0;
+	// height: 500px; //setting height for the wrapper cause content to overflow and overlap other content if the children height is bigger than the parnet
+}
+
+.mainImage {
+	background-color: rgb(207, 204, 204);
+	border-radius: 8px;
+	width: 250px;
+	flex: 1 1 auto;
+	img {
+		height: 400px;
+		width: 100%;
+	}
+}
+
+.productInfo {
+	width: 250px;
+	flex: 1 1 auto;
+	padding: 0 30px;
+	div {
+		margin: 5px 0;
+	}
+	.sex {
+		margin: 0;
+		color: gray;
+	}
+	.ratings,
+	.pricing {
+		display: flex;
+		justify-content: flex-start;
+		align-items: baseline;
+		strong,
+		.rates,
+		.priceNew,
+		.priceOld {
+			margin-left: 15px;
+		}
+		.priceNew {
+			color: $--secondary-color;
+			font-weight: bold;
+			font-size: 1.2rem;
+		}
+		.priceOld {
+			font-size: 0.9rem;
+			color: gray;
+		}
+	}
+	hr {
+		border: 1px solid #eee;
+	}
+	.title {
+		font-weight: bold;
+		font-size: 1.1rem;
+	}
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }

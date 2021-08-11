@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,OAAO,CAAC;EACP,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,OAAO;EACf,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,iBAAiB;EACzB,aAAa,EAAE,IAAI;EACnB,SAAS,EAAE,MAAM;EACjB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,GAAG;EACf,KAAK,ECZc,OAAO;CDgB1B;;AAhBD,AAaC,OAbM,AAaL,MAAM,CAAC;EACP,gBAAgB,EAAE,OAAO;CACzB",
+    "sources": [
+        "Circle.module.scss",
+        "../../Styles/Variables/Variables.scss"
+    ],
+    "names": [],
+    "file": "Circle.module.css"
+}

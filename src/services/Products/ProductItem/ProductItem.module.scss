@@ -1,4 +1,4 @@
-@import '../../Styles/Variables/Variables.scss';
+@import '../../../Styles/Variables/Variables.scss';
 
 .product {
 	display: flex;
@@ -46,7 +46,7 @@
 	display: flex;
 	justify-content: flex-start;
 	margin-bottom: 10px;
-	align-items: center;
+	align-items: baseline;
 }
 
 .price2 {
@@ -56,15 +56,6 @@
 	font-size: 0.95rem;
 }
 
-.badge {
-	background-color: $--primary-color;
-	width: fit-content;
-	font-size: 0.7rem;
-	padding: 4px;
-	border-radius: 16px;
-	display: inline-block;
-	margin-left: 5px;
-}
 
 .description {
 	display: flex;

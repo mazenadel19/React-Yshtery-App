@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import './Rating.module.css'
 
 const Rating = ({ value, color }) => {
 	return (
-		<div className='rating'>
+		<div>
 			<span>
 				<i
 					style={{ color }}

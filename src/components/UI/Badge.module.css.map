@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACN,gBAAgB,ECHC,OAAO;EDIxB,KAAK,EAAE,mBAAmB;EAC1B,KAAK,EAAE,gBAAgB;EACvB,KAAK,EAAE,WAAW;EAClB,SAAS,EAAE,MAAM;EACjB,OAAO,EAAE,GAAG;EACZ,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,YAAY;EACrB,WAAW,EAAE,GAAG;CAChB",
+    "sources": [
+        "Badge.module.scss",
+        "../../Styles/Variables/Variables.scss"
+    ],
+    "names": [],
+    "file": "Badge.module.css"
+}

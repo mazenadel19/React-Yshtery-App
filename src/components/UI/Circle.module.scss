@@ -1,0 +1,18 @@
+@import '../../Styles/Variables/Variables.scss';
+.circle {
+	width: 50px;
+	cursor: pointer;
+	height: 50px;
+	border: 2px solid #dddcdc;
+	border-radius: 35px;
+	font-size: 0.7rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+	margin-top: 5px;
+	color: $--secondary-color;
+	&:hover {
+		background-color: #ececec;
+	}
+}

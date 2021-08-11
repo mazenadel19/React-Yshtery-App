@@ -4,6 +4,15 @@
           animation: products-appear 1s ease-out forwards;
 }
 
+.products h1 {
+  color: #542e90;
+}
+
+.products h2 {
+  font-weight: 200;
+  color: grey;
+}
+
 .products ul {
   display: -webkit-box;
   display: -ms-flexbox;

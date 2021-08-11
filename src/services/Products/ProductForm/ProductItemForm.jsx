@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Input from '../../../components/UI/Input'
+import NumberInput from '../../../components/UI/NumberInput'
 import classes from './ProductItemForm.module.css'
 
 export default class ProductItemForm extends Component {
@@ -41,13 +41,29 @@ export default class ProductItemForm extends Component {
 		this.props.onAddToCart(enteredAmountNumber)
 	}
 
+	increaseValue = () => {
+		this.setState(prevState => ({
+			amountInput: prevState.amountInput + 1,
+		}))
+	}
+
+	decreaseValue = () => {
+		if (this.state.amountInput > 1) {
+			this.setState(prevState => ({
+				amountInput: prevState.amountInput - 1,
+			}))
+		}
+	}
+
 	render() {
 		return (
 			<form className={classes.form}>
 				<strong>Quantity</strong>
-				<Input
+				<NumberInput
 					inputHandler={this.inputHandler}
 					value={this.state.amountInput}
+					increaseValue={this.increaseValue}
+					decreaseValue={this.decreaseValue}
 					input={{
 						id: 'amount_' + this.props.id,
 						type: 'number',

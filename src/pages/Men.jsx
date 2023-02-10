@@ -5,7 +5,7 @@ import classes from './main.module.scss'
 const Men = props => {
 	return (
 		<main className={classes.main}>
-			<Products addItemToCartHandler={props.addItemToCartHandler}/>
+			<Products addItemToCartHandler={props.addItemToCartHandler} currentProduct={props.currentProduct} />
 		</main>
 	)
 }

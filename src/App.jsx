@@ -11,6 +11,7 @@ export default class App extends Component {
     items: [],
     totalAmount: 0,
     numberOfCartItems: 0,
+    currentProductName: 'Black T-Shirt'
   }
 
   addItemToCartHandler = item => {
@@ -43,10 +44,14 @@ export default class App extends Component {
     }))
   }
 
+  currentProduct = product => {
+    this.setState(prev => ({ ...prev, currentProductName: product?.name || '' }))
+  }
+
   render() {
     return (
-      <Layout state={this.state}>
-        <RouteProvider addItemToCartHandler={this.addItemToCartHandler} />
+      <Layout state={this.state} currentProduct={this.currentProduct}>
+        <RouteProvider addItemToCartHandler={this.addItemToCartHandler} currentProduct={this.currentProduct} />
       </Layout>
     )
   }

@@ -4,26 +4,41 @@
 
 .header {
 	@include headerStyle(white, 4rem, 1.5rem, black);
+
 	@include md-screen {
 		justify-content: space-between;
 	}
+
 	.image {
 		display: flex;
 		flex: 2 2 auto;
 		height: 4rem;
 		justify-content: space-evenly;
+
 		@include md-screen {
 			display: none;
 		}
 	}
+
+	a,
+	span {
+		font-size: 16px;
+	}
+
+	.cartNumber {
+		position: relative;
+		left: 22px;
+		top: -12px;
+		font-size: 10px;
+	}
+
 	.emptyCart {
-		background-color: red;
-		color: white;
+		background-color: $--primary-color;
 		padding: 2px;
 	}
+
 	.fullCart {
 		background-color: yellowgreen;
-		color: black;
 		padding: 2px;
 	}
 }

@@ -17,7 +17,7 @@ const loading = (
   </div>
 )
 
-const RouteProvider = ({ addItemToCartHandler }) => {
+const RouteProvider = ({ addItemToCartHandler, currentProduct }) => {
 
   return (
     <Suspense fallback={loading}>
@@ -26,7 +26,7 @@ const RouteProvider = ({ addItemToCartHandler }) => {
           <Redirect to='/men' />
         </Route>
         <Route path='/men'>
-          <Men addItemToCartHandler={addItemToCartHandler} />
+          <Men addItemToCartHandler={addItemToCartHandler} currentProduct={currentProduct}/>
         </Route>
         <Route path='/women'>
           <Women />

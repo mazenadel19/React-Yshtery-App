@@ -9,22 +9,15 @@ export default class NavigationTopWhite extends Component {
 		const { numberOfCartItems, items, totalAmount } = this.props.state
 		return (
 			<header className={classes.header}>
-				<Input placeholder='search' width='250px' />
+				<Input placeholder='search' width='250px' type={'search'}/>
 				<div className={classes.image}>
 					<img src='/images/logo.png' alt='logo' />
 				</div>
 				<nav className={classes.nav}>
 					<ul>
 						<li>
-							{numberOfCartItems > 0 ? (
-								<span className={classes.fullCart}>{numberOfCartItems}</span>
-							) : (
-								<span className={classes.emptyCart}>{numberOfCartItems}</span>
-							)}
-
-							<NavLink to='/men'>
-								<Cart items={items} totalAmount={totalAmount} />
-							</NavLink>
+							<span className={`${numberOfCartItems > 0 ? classes.fullCart : classes.emptyCart} ${classes.cartNumber}`}>{numberOfCartItems}</span>
+							<Cart items={items} totalAmount={totalAmount} />
 						</li>
 						<li>
 							<NavLink to='/'>

@@ -15,7 +15,6 @@ const ProductDetails = ({ selectedProduct, addItemToCartHandler }) => {
 		})
 	}
 
-	console.log(selectedProduct)
 	const price = `${selectedProduct.price.toFixed(2)} L.E.`
 
 	const price2 = `${(

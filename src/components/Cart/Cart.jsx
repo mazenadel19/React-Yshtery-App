@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import classes from './Cart.module.scss'
+import cartIcon from "/images/cartIcon.svg"
 
 export default class Cart extends Component {
 	state = {
@@ -13,7 +14,8 @@ export default class Cart extends Component {
 	render() {
 		return (
 			<div className={classes.dropdown} onClick={this.cartHandler}>
-				<i className='fas fa-ship'></i> Cart
+				<img src={cartIcon} alt="cartIcon" width={20} />
+				<span>Cart</span>
 				{this.state.cartVisiblity && (
 					<div className={classes['dropdown-content']}>
 						{this.props.items.length > 0 ? (

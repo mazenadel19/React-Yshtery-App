@@ -22,6 +22,7 @@ export default class Products extends Component {
 
 	productSelectionHandler = selectedProduct => {
 		this.setState({ selectedProduct })
+		this.props.currentProduct(selectedProduct)
 	}
 
 	productsList = DUMMY_Products.map(product => (

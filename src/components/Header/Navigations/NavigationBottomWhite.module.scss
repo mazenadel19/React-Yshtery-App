@@ -16,6 +16,7 @@
 			&:hover > span,
 			&:focus > span {
 				text-decoration: underline;
+				text-transform: capitalize;
 			}
 		}
 	}

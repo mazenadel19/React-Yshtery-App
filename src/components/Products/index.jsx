@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Slider from '../components/UI/Slider'
+import Slider from '../../components/UI/Slider'
 import classes from './Products.module.scss'
-import ProductDetails from './Products/ProductDetails/ProductDetails'
-import ProductItem from './Products/ProductItem/ProductItem'
-import blackShirt from '../images/blackShirt.png'
+import ProductDetails from './ProductDetails/ProductDetails'
+import ProductItem from './ProductItem/ProductItem'
+import blackShirt from '../../images/blackShirt.png'
 
 export default class Products extends Component {
 	state = {
@@ -23,7 +23,6 @@ export default class Products extends Component {
 		this.setState({ selectedProduct })
 	}
 
-	// API CALL IN MEN PAGE AND DATA IS PASSED BY PROPS
 	productsList = this.props.DUMMY_Products.map(product => (
 		<ProductItem
 			id={product.id}

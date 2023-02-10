@@ -4,14 +4,14 @@ import classes from './NumberInput.module.scss'
 export default class NumberInput extends Component {
 	render() {
 		return (
-			<div class={classes.NumberInput}>
+			<div className={classes.NumberInput}>
 				<span
-					class={classes['input-number-decrement']}
+					className={classes['input-number-decrement']}
 					onClick={this.props.decreaseValue}>
 					–
 				</span>
 				<input
-					class={classes['input-number']}
+					className={classes['input-number']}
 					id='number'
 					type='text'
 					{...this.props.input}
@@ -19,7 +19,7 @@ export default class NumberInput extends Component {
 					onChange={this.props.inputHandler}
 				/>
 				<span
-					class={classes['input-number-increment']}
+					className={classes['input-number-increment']}
 					onClick={this.props.increaseValue}>
 					+
 				</span>

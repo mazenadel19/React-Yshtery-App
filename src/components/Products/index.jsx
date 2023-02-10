@@ -4,6 +4,7 @@ import classes from './Products.module.scss'
 import ProductDetails from './ProductDetails/ProductDetails'
 import ProductItem from './ProductItem/ProductItem'
 import blackShirt from '../../images/blackShirt.png'
+import { DUMMY_Products } from '../../services'
 
 export default class Products extends Component {
 	state = {
@@ -23,7 +24,7 @@ export default class Products extends Component {
 		this.setState({ selectedProduct })
 	}
 
-	productsList = this.props.DUMMY_Products.map(product => (
+	productsList = DUMMY_Products.map(product => (
 		<ProductItem
 			id={product.id}
 			key={product.id}

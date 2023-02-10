@@ -17,7 +17,7 @@ export default class NavigationTopWhite extends Component {
 					<ul>
 						<li>
 							<span className={`${numberOfCartItems > 0 ? classes.fullCart : classes.emptyCart} ${classes.cartNumber}`}>{numberOfCartItems}</span>
-							<Cart items={items} totalAmount={totalAmount} />
+							<Cart items={items} totalAmount={totalAmount} removeItem={this.props.removeItem} />
 						</li>
 						<li>
 							<NavLink to='/'>

@@ -8,9 +8,7 @@ import classes from './ProductDetails.module.scss'
 const ProductDetails = ({ selectedProduct, addItemToCartHandler }) => {
 	const AddToCartHandler = amount => {
 		addItemToCartHandler({
-			id: selectedProduct.id,
-			name: selectedProduct.name,
-			price: selectedProduct.price,
+			...selectedProduct,
 			amount: amount,
 		})
 	}

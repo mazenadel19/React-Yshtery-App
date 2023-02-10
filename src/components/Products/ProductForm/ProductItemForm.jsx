@@ -39,6 +39,12 @@ export default class ProductItemForm extends Component {
 		}))
 
 		this.props.onAddToCart(enteredAmountNumber)
+
+		this.setState(prevstate => ({
+			...prevstate,
+			amountIsValid: true,
+			amountInput: 1,
+		}))
 	}
 
 	increaseValue = () => {
@@ -57,7 +63,7 @@ export default class ProductItemForm extends Component {
 
 	render() {
 		return (
-			<form className={classes.form}>
+			<form className={classes.form} onSubmit={this.submitHandler}>
 				<strong>Quantity</strong>
 				<NumberInput
 					inputHandler={this.inputHandler}
@@ -73,8 +79,8 @@ export default class ProductItemForm extends Component {
 					}}
 				/>
 				<div className={classes.buttonsWrapper}>
-					<button onClick={this.submitHandler}>Add To Cart</button>
-					<button className={classes.pickup}>Pickup From The Store</button>
+					<button type='submit'>Add To Cart</button>
+					<button type='button' className={classes.pickup}>Pickup From The Store</button>
 				</div>
 				{!this.state.amountIsValid && <p>please enter a valid amount(1-5)</p>}
 			</form>

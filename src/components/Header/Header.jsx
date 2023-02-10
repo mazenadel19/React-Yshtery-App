@@ -9,7 +9,7 @@ export default class Header extends Component {
 		return (
 			<>
 				<NavigationYellow />
-				<NavigationTopWhite state={this.props.state} />
+				<NavigationTopWhite state={this.props.state} removeItem={this.props.removeItem} />
 				<NavigationBlack currentProduct={this.props.currentProduct} />
 				<NavigationBottomWhite state={this.props.state} />
 			</>

@@ -6,7 +6,7 @@ import classes from './Layout.module.scss'
 const Layout = props => {
 	return (
 		<div className={classes.layout}>
-			<Header state={props.state} currentProduct={props.currentProduct}/>
+			<Header state={props.state} currentProduct={props.currentProduct} removeItem={props.removeItem} />
 			{props.children}
 			<Footer />
 		</div>

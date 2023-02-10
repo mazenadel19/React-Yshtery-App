@@ -44,13 +44,26 @@ export default class App extends Component {
     }))
   }
 
+  removeItem = item => {
+    const filteredItems = this.state.items.filter(p => p.id !== item.id)
+    const updatedTotalAmount = this.state.totalAmount - item.price * item.amount
+    const updatedNumberOfCartItems = filteredItems.length
+
+    this.setState(prevState => ({
+      ...prevState,
+      items: filteredItems,
+      totalAmount: updatedTotalAmount,
+      numberOfCartItems: updatedNumberOfCartItems,
+    }))
+  }
+
   currentProduct = product => {
     this.setState(prev => ({ ...prev, currentProductName: product?.name || '' }))
   }
 
   render() {
     return (
-      <Layout state={this.state} currentProduct={this.currentProduct}>
+      <Layout state={this.state} currentProduct={this.currentProduct} removeItem={this.removeItem}>
         <RouteProvider addItemToCartHandler={this.addItemToCartHandler} currentProduct={this.currentProduct} />
       </Layout>
     )

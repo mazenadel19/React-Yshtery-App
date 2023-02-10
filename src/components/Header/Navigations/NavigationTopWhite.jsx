@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import Cart from '../../Cart/Cart'
 import Input from '../../UI/Input'
-import classes from './NavigationTopWhite.module.css'
+import classes from './NavigationTopWhite.module.scss'
 
 export default class NavigationTopWhite extends Component {
 	render() {

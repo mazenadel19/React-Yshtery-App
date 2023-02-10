@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import classes from './NavigationBottomWhite.module.css'
+import classes from './NavigationBottomWhite.module.scss'
 
 const NavigationBottomWhite = () => {
 	return (

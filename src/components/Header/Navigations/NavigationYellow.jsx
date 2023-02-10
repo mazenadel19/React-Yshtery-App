@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import classes from './NavigationYellow.module.css'
+import classes from './NavigationYellow.module.scss'
 
 const NavigationYellow = () => {
 	return (

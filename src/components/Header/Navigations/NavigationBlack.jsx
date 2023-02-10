@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import classes from './NavigationBlack.module.css'
+import classes from './NavigationBlack.module.scss'
 
 const NavigationBlack = () => {
 	return (

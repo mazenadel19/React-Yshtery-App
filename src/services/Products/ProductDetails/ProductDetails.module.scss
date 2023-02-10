@@ -1,4 +1,5 @@
 @import '../../../Styles/Variables/Variables.scss';
+
 .productDetails {
 	display: flex;
 	flex-wrap: wrap;
@@ -23,41 +24,51 @@
 	width: 250px;
 	flex: 1 1 auto;
 	padding: 0 30px;
+
 	div {
 		margin: 5px 0;
+		border-radius: 20px;
 	}
+
 	.sex {
 		margin: 0;
 		color: gray;
 	}
+
 	.ratings,
 	.pricing {
 		display: flex;
 		justify-content: flex-start;
 		align-items: baseline;
+
 		strong,
 		.rates,
 		.priceNew,
 		.priceOld {
 			margin-left: 15px;
 		}
+
 		.priceNew {
 			color: $--secondary-color;
 			font-weight: bold;
 			font-size: 1.2rem;
 		}
+
 		.priceOld {
 			font-size: 0.9rem;
 			color: gray;
 		}
 	}
+
 	hr {
 		border: 1px solid #eee;
 	}
+
 	.title {
 		font-weight: bold;
 		font-size: 1.1rem;
 	}
+
 	.row {
 		display: flex;
 		flex-wrap: wrap;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import NumberInput from '../../../components/UI/NumberInput'
-import classes from './ProductItemForm.module.css'
+import classes from './ProductItemForm.module.scss'
 
 export default class ProductItemForm extends Component {
 	state = {

@@ -5,7 +5,7 @@ import purpleShirt from '../images/purpleShirt.png'
 import redShirt from '../images/redShirt.png'
 import whiteShirt from '../images/whiteShirt.png'
 import Products from '../services/Products'
-import classes from './main.module.css'
+import classes from './main.module.scss'
 
 const DUMMY_Products = [
 	{

@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import Slider from '../components/UI/Slider'
-import classes from './Products.module.css'
+import classes from './Products.module.scss'
 import ProductDetails from './Products/ProductDetails/ProductDetails'
 import ProductItem from './Products/ProductItem/ProductItem'
+import blackShirt from '../images/blackShirt.png'
 
 export default class Products extends Component {
 	state = {
 		selectedProduct: {
 			id: 't1',
-			image: '/static/media/blackShirt.940ce386.png',
+			image: blackShirt,
 			name: 'Black T-Shirt',
 			price: 22.99,
 			rating: 4.5,

@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './main.module.css'
+import classes from './main.module.scss'
 
 const Unisex = () => {
     return <h1 className={classes.main}>Unisex</h1>

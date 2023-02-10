@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import classes from './NumberInput.module.css'
+import classes from './NumberInput.module.scss'
 
 export default class NumberInput extends Component {
 	render() {

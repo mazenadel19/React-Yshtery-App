@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Rating from '../../../components/Rating/Rating'
 import Badge from '../../../components/UI/Badge'
 import Card from '../../../components/UI/Card'
-import classes from './ProductItem.module.css'
+import classes from './ProductItem.module.scss'
 
 export default class ProductItem extends Component {
 	productSelectionHandler = () => {

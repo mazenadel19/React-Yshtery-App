@@ -3,7 +3,7 @@ import Rating from '../../../components/Rating/Rating'
 import Badge from '../../../components/UI/Badge'
 import Circle from '../../../components/UI/Circle'
 import ProductItemForm from '../ProductForm/ProductItemForm'
-import classes from './ProductDetails.module.css'
+import classes from './ProductDetails.module.scss'
 
 const ProductDetails = ({ selectedProduct, addItemToCartHandler }) => {
 	const AddToCartHandler = amount => {
@@ -22,6 +22,8 @@ const ProductDetails = ({ selectedProduct, addItemToCartHandler }) => {
 		selectedProduct.price +
 		(selectedProduct.price * selectedProduct.discount) / 100
 	).toFixed(2)} L.E.`
+
+
 
 	return (
 		<div className={classes.productDetails}>
